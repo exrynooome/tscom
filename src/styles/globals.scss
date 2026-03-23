@@ -1,0 +1,39 @@
+@use "text" as *;
+
+:root {
+    --WHITE: #ffffff;
+    --GRAY: rgb(238, 238, 238);
+    --GRAY_H: rgb(228, 228, 228);
+    --GRAY_A: rgb(218, 218, 218);
+    --GRAY_B: rgb(221, 221, 221);
+    --GRAY_T: rgb(136, 136, 136);
+    --BLACK: rgb(34, 34, 34);
+    --GREEN: rgb(0, 127, 85);
+    --GREEN_H: rgb(0, 155, 100);
+    --GREEN_A: rgb(20, 175, 120);
+    --RED: rgb(237, 28, 36);
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--BLACK);
+  background: var(--WHITE);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
