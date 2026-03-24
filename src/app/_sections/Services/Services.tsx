@@ -11,7 +11,7 @@ const Services: FunctionComponent = () => {
                 <div className={styles.info}>
                     <div className={styles.text}>
                         <p className={"text_24 sbold"}>Проектные работы</p>
-                        <p className={"text_18 gray"}>
+                        <p className={`${styles.desc} gray`}>
                             Проектные работы; авторский надзор за работами,
                             выполняемыми по нашим проектам; техническое обслуживание построенных систем.
                             Проектно-сметные решения проходили государственную экспертизу
@@ -19,7 +19,7 @@ const Services: FunctionComponent = () => {
                     </div>
                     <div className={styles.text}>
                         <p className={"text_24 sbold"}>Проектируем и осуществляем сопровождение</p>
-                        <p className={"text_18 gray"}>
+                        <p className={`${styles.desc} gray`}>
                             Изыскательские, проектно-сметные работы систем безопасности (АПС, ОПС, СОУЭ, СКУД),
                             видеонаблюдение, мониторинг и передача извещений о пожаре с автоматическим выводом
                             сигнала на пульт «01», комплексы мониторинга различного назначения

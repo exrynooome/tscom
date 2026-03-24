@@ -12,6 +12,14 @@ h1 {
 
 h2 {
   font-size: 128px;
+
+  @media (max-width: 1279px) {
+    font-size: 72px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 52px;
+  }
 }
 
 h3 {

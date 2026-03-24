@@ -18,12 +18,12 @@ const Section: FunctionComponent<Props> = ({
                                  }) => {
     return (
         <section id={id} className={styles.section}>
-            <p className={`${styles.id} text_18`}>{id_text}</p>
+            <p className={styles.id}>{id_text}</p>
             <div className={styles.content}>
                 <div className={styles.text}>
                     <h3>{title}</h3>
                     {description && (
-                        <p className={`${styles.desc} text_24 gray`}>{description}</p>
+                        <p className={`${styles.desc} gray`}>{description}</p>
                     )}
                 </div>
                 {children}

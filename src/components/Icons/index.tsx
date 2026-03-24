@@ -18,10 +18,41 @@ const CallReceived = () => (
     </svg>
 )
 
+const Database = () => (
+    <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="47.9999" cy="19.9998" rx="32" ry="12" stroke="#007F55" strokeWidth="7"/>
+        <path d="M28.0001 43.3679C30.4064 44.0913 33.0974 44.687 36.0001 45.1276" stroke="#007F55" strokeWidth="7" strokeLinecap="round"/>
+        <path d="M79.9999 47.9998C79.9999 54.6272 65.673 59.9998 47.9999 59.9998C30.3268 59.9998 15.9999 54.6272 15.9999 47.9998" stroke="#007F55" strokeWidth="7"/>
+        <path d="M28.0001 71.3679C30.4064 72.0913 33.0974 72.687 36.0001 73.1276" stroke="#007F55" strokeWidth="7" strokeLinecap="round"/>
+        <path d="M79.9999 19.9998V75.9998C79.9999 82.6272 65.673 87.9998 47.9999 87.9998C30.3268 87.9998 15.9999 82.6272 15.9999 75.9998V19.9998" stroke="#007F55" strokeWidth="7"/>
+    </svg>
+)
+
+const Lock = () => (
+    <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M56 80C56 80 60 80 64 88C64 88 76.7059 68 88 64" stroke="#007F55" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M72 56C71.802 53.5098 71.5058 51.0487 71.1777 48.621C70.2746 41.9401 64.719 36.706 57.9582 36.3964C52.2693 36.1359 46.4904 36 40.1266 36C33.7627 36 27.9838 36.1359 22.295 36.3964C15.5342 36.706 9.97856 41.9401 9.07548 48.621C8.4861 52.9813 8 57.4495 8 62C8 66.5505 8.4861 71.0187 9.07548 75.379C9.97856 82.0599 15.5342 87.294 22.295 87.6036C27.9838 87.8641 33.7627 88 40.1266 88C42.1376 88 44.0902 87.9864 46 87.9596" stroke="#007F55" stroke-width="7" stroke-linecap="round"/>
+        <path d="M22 36V26C22 16.0589 30.0589 8 40 8C49.9411 8 58 16.0589 58 26V36" stroke="#007F55" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+)
+
+const Plug = () => (
+    <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M71.4162 48.6398C69.884 50.4419 67.0526 50.4551 65.266 48.6685L47.3315 30.734C45.5449 28.9474 45.5581 26.116 47.3602 24.5838L52.284 20.3976C55.8235 17.3882 60.1396 15.393 64.8176 14.6036L67.7175 14.1143C70.456 13.6522 73.3356 14.6088 75.3898 16.6631L79.3369 20.6102C81.3912 22.6644 82.3478 25.544 81.8857 28.2825L81.3964 31.1824C80.607 35.8604 78.6118 40.1765 75.6024 43.716L71.4162 48.6398Z" stroke="#007F55" stroke-width="7"/>
+        <path d="M78 18L86 10" stroke="#007F55" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M10 86L18 78" stroke="#007F55" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M24.5838 47.3602C26.116 45.5581 28.9474 45.5449 30.734 47.3315L48.6685 65.266C50.4551 67.0526 50.4419 69.884 48.6398 71.4162L43.716 75.6025C40.1765 78.6118 35.8604 80.607 31.1824 81.3964L28.2825 81.8857C25.544 82.3478 22.6644 81.3912 20.6102 79.3369L16.6631 75.3898C14.6088 73.3356 13.6522 70.456 14.1143 67.7175L14.6036 64.8176C15.393 60.1396 17.3882 55.8235 20.3976 52.284L24.5838 47.3602Z" stroke="#007F55" stroke-width="7"/>
+        <path d="M34 50L42 42M46 62L54 54" stroke="#007F55" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+)
+
 const Icons = {
     call: Call,
     mail: Mail,
     call_reseived: CallReceived,
+    database: Database,
+    lock: Lock,
+    plug: Plug,
 } as const;
 
 export type IconName = keyof typeof Icons;
