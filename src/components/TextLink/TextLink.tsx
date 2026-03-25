@@ -23,7 +23,7 @@ const TextLink: React.FC<Props> = ({
             href={href}
             {...props}
         >
-            {children}
+            <p className={"text_18"}>{children}</p>
         </Link>
     )
 }
