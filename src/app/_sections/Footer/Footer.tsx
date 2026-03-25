@@ -20,7 +20,7 @@ const Footer: FunctionComponent = () => {
                     </div>
                     <div className={styles.links}>
                         <div className={styles.links_block}>
-                            <p>Навигация</p>
+                            <p className={"text_18"}>Навигация</p>
                             <TextLink href="#services">Услуги</TextLink>
                             <TextLink href="#about">О нас</TextLink>
                             <TextLink href="#indicators">Показатели</TextLink>
@@ -28,14 +28,14 @@ const Footer: FunctionComponent = () => {
                             <TextLink href="#consult">Форма</TextLink>
                         </div>
                         <div className={styles.links_block}>
-                            <p>Документы</p>
+                            <p className={"text_18"}>Документы</p>
                             <TextLink href="/files/license.pdf">Лицензия</TextLink>
                             <TextLink href="/files/card.pdf">Карточка предприятия</TextLink>
                             <TextLink href="/files/resume.pdf">Резюме предприятия</TextLink>
                             <TextLink href="/files/policy.pdf">Политика конфиденциальности</TextLink>
                         </div>
                         <div className={styles.links_block}>
-                            <p>Контакты</p>
+                            <p className={"text_18"}>Контакты</p>
                             <TextLink href="#footer" onClick={() => navigator.clipboard.writeText("+78612054462")}>+7 861 205-44-62</TextLink>
                             <TextLink href="#footer" onClick={() => navigator.clipboard.writeText("info@tscom.ru")}>info@tscom.ru</TextLink>
                         </div>
@@ -50,7 +50,7 @@ const Footer: FunctionComponent = () => {
                     <div className={styles.links}>
                         <div className={styles.links_block_reverse}>
                             <div className={styles.links_block}>
-                                <p>Навигация</p>
+                                <p className={"text_18"}>Навигация</p>
                                 <TextLink href="#services">Услуги</TextLink>
                                 <TextLink href="#about">О нас</TextLink>
                                 <TextLink href="#indicators">Показатели</TextLink>
@@ -58,7 +58,7 @@ const Footer: FunctionComponent = () => {
                                 <TextLink href="#consult">Форма</TextLink>
                             </div>
                             <div className={styles.links_block}>
-                                <p>Документы</p>
+                                <p className={"text_18"}>Документы</p>
                                 <TextLink href="/files/license.pdf">Лицензия</TextLink>
                                 <TextLink href="/files/card.pdf">Карточка предприятия</TextLink>
                                 <TextLink href="/files/resume.pdf">Резюме предприятия</TextLink>
@@ -66,7 +66,7 @@ const Footer: FunctionComponent = () => {
                             </div>
                         </div>
                         <div className={`${styles.links_block} ${styles.desktop_links}`}>
-                            <p>Контакты</p>
+                            <p className={"text_18"}>Контакты</p>
                             <TextLink href="#footer" onClick={() => navigator.clipboard.writeText("+78612054462")}>+7 861 205-44-62</TextLink>
                             <TextLink href="#footer" onClick={() => navigator.clipboard.writeText("info@tscom.ru")}>info@tscom.ru</TextLink>
                         </div>
