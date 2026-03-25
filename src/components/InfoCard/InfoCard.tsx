@@ -6,22 +6,29 @@ type Props = {
     text: string;
     icon?: IconName | null;
     title?: string;
+    className?: string;
+    gray?: boolean;
+    variant?: "text_v" | "icon";
 }
 
 const InfoCard: FunctionComponent<Props> = ({
                                                 text,
                                                 icon,
-                                                title
+                                                title,
+                                                className = "",
+                                                gray = false,
+                                                variant = "icon"
                                             }) => {
 
     return (
-        <div className={styles.card}>
+        <div className={`${styles.card} ${styles[className]} ${styles[variant]} ${gray ? styles.gray : ''}`}>
             {icon ? (
                 <Icon name={icon} />
-            ) : (
+            ) : gray ? (null) : (
                 <h2>{title}</h2>
-            )}
-            <p className={styles.text}>{text}</p>
+            )
+            }
+            <p className={`${styles.text} ${gray ? styles.gray_t : ''}`}>{text}</p>
         </div>
     )
 }

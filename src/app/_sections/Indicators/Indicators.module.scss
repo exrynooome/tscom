@@ -1,0 +1,20 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  box-shadow: inset -1px 0 0 var(--GRAY_B), inset 0 -1px 0 var(--GRAY_B);
+}
+
+.wide {
+
+  @media (max-width: 767px) {
+    grid-column: 1 / -1;
+  }
+}
+
+.noTitle {
+
+  @media (max-width: 767px) {
+    height: 124px;
+  }
+}
+

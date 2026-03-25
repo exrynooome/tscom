@@ -1,3 +1,14 @@
+.container {
+  height: calc(100% + 160px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @media (max-width: 767px) {
+    height: calc(100% + 120px);
+  }
+}
+
 .section {
   width: 100%;
   box-shadow: inset 0 0 0 1px var(--GRAY_B);
@@ -5,10 +16,12 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  margin-top: 160px;
 
   @media (max-width: 767px) {
     flex-direction: column;
     box-shadow: inset 0 -1px 0 var(--GRAY_B);
+    margin-top: 120px;
   }
 }
 
@@ -59,6 +72,7 @@
     padding: 24px;
     width: 100%;
     box-shadow: inset 0 1px 0 var(--GRAY_B), inset 0 -1px 0 var(--GRAY_B);
+    gap: 12px;
   }
 }
 
@@ -69,5 +83,9 @@
   @media (max-width: 1279px) {
     width: 100%;
     font-size: 18px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 16px;
   }
 }

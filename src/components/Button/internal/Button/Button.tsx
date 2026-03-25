@@ -9,6 +9,7 @@ type Props = {
     onClick?: React.MouseEventHandler;
     children?: React.ReactNode;
     width?: "full" | "hug";
+    type?: "button" | "submit" | "reset";
     className?: string;
 }
 
@@ -19,6 +20,7 @@ const Button: FunctionComponent<Props> = ({
                                               leftIcon = null,
                                               rightIcon = null,
                                               width = "full",
+                                              type = "button",
                                               className,
                                               ...props
                                           }) => {
@@ -47,7 +49,7 @@ const Button: FunctionComponent<Props> = ({
                 <button
                     className={classNameResult}
                     onClick={onClick}
-                    type="button"
+                    type={type}
                     {...props}
                 >
                     {content}

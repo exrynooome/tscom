@@ -15,7 +15,7 @@ const About: FunctionComponent = () => {
                 "защиту для спортивных комплексов, промышленных предприятий " +
                 "и критически важной инфраструктуры"}
         >
-            <div className={styles.row}>
+            <div className={styles.grid}>
                 <InfoCard icon={"database"} text={"Системы передачи данных"} />
                 <InfoCard icon={"lock"} text={"Системы безопасности"} />
                 <InfoCard icon={"plug"} text={"Системы электропитания"} />

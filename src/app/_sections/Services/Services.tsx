@@ -6,7 +6,7 @@ import Button from "@/components/Button";
 const Services: FunctionComponent = () => {
 
     return (
-        <Section title="Проектирование и техническое обслуживание" id_text={"Услуги"} id={"services"}>
+        <Section title={"Проектирование и техническое обслуживание"} id_text={"Услуги"} id={"services"}>
             <div className={styles.content}>
                 <div className={styles.info}>
                     <div className={styles.text}>
