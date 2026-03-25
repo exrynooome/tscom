@@ -71,7 +71,7 @@ const Footer: FunctionComponent = () => {
                             <TextLink href="#footer" onClick={() => navigator.clipboard.writeText("info@tscom.ru")}>info@tscom.ru</TextLink>
                         </div>
                         <div className={`${styles.links_block} ${styles.mobile_links}`}>
-                            <p>Контакты</p>
+                            <p className={"text_18"}>Контакты</p>
                             <TextLink href="tel:+78612054462">+7 861 205-44-62</TextLink>
                             <TextLink href="mailto:info@tscom.ru">info@tscom.ru</TextLink>
                         </div>
