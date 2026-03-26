@@ -1,19 +1,28 @@
 .link {
-  display: inline-block;
+  display: inline;
   transition: color 150ms ease;
   padding: 0;
   text-decoration: none;
   cursor: pointer;
+  width: 100%;
+  font-family: var(--font-inter);
 
-  p {
-    color: var(--GREEN);
+  color: var(--GREEN);
 
-    &:hover {
-      color: var(--GREEN_H);
-    }
+  &.policy {
+    color: var(--BLACK);
+    font-size: 16px;
+  }
 
-    &:active {
-      color: var(--GREEN_A);
-    }
+  &:hover {
+    color: var(--GREEN_H);
+  }
+
+  &:active {
+    color: var(--GREEN_A);
+  }
+
+  &.error {
+    color: var(--RED);
   }
 }

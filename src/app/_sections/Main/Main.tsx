@@ -9,7 +9,7 @@ const Main: FunctionComponent = () => {
                 <h1>ТСКОМ</h1>
                 <p className={"text_32"}>Комплесные системы безопасности</p>
             </div>
-            <Button width={"hug"}>Бесплатная консультация</Button>
+            <Button width={"hug"} href={"#consult"}>Бесплатная консультация</Button>
         </section>
     );
 };

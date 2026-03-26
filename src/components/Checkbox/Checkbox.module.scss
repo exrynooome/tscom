@@ -58,8 +58,11 @@
 }
 
 .label {
-  display: inline-flex;
-  width: 394px;
+  display: inline;
+  width: 100%;
+  font-family: var(--font-inter);
+  color: var(--GRAY_T);
+  font-size: 16px;
 
   @media (max-width: 767px) {
     width: 100%;

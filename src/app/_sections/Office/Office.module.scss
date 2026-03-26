@@ -1,6 +1,11 @@
 .map {
   height: 600px;
 
+  iframe {
+    border: 1px solid var(--GRAY_B);
+    border-top: none;
+  }
+
   @media (max-width: 1279px) {
     height: 400px;
   }

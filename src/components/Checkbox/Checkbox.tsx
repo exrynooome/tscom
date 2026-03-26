@@ -3,7 +3,6 @@
 import React from "react";
 import styles from "./Checkbox.module.scss";
 import Icon from "@/components/Icons";
-import Link from "next/link";
 
 interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
     checked?: boolean;
@@ -22,7 +21,6 @@ const Checkbox: React.FC<Props> = ({
                                        className = '',
                                        children,
                                        required = true,
-                                       ...restProps
                                    }) => {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -45,7 +43,10 @@ const Checkbox: React.FC<Props> = ({
                     )}
                 </div>
             </label>
-            <Link href={href} className={styles.label}>{children}</Link>
+            <label className={styles.label}>
+                Нажимая кнопку «Отправить», я подтверждаю своё согласие на {" "}
+                {children}
+            </label>
         </div>
     )
 }

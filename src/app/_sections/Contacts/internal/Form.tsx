@@ -8,6 +8,7 @@ import { FormErrors, FormSubmitData } from "@/types/form";
 import { validateEmail, validatePhone, validateFormData, validateName } from "@/utils/validate";
 import Button from "@/components/Button";
 import Icon from "@/components/Icons";
+import TextLink from "@/components/TextLink";
 
 const Form: FunctionComponent = () => {
 
@@ -180,7 +181,9 @@ const Form: FunctionComponent = () => {
                     href={"/files/policy.pdf"}
                     error={errors.checkbox}
                 >
-                    <p>Нажимая кнопку «Отправить», я подтверждаю своё согласие на обработку персональных данных</p>
+                    <TextLink href={"/"} variant={"policy"} error={errors.checkbox}>
+                        обработку персональных данных
+                    </TextLink>
                 </Checkbox>
 
                 <Button type="submit">

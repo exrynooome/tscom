@@ -1,6 +1,6 @@
 export const validateEmail = (email: string): string | undefined => {
     if (!email.trim()) {
-        return 'Введите email'
+        return 'Введите электронную почту'
     }
 
     if (!email) return undefined;
