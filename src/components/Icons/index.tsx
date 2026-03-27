@@ -83,6 +83,12 @@ const LogoBig = () => (
     </svg>
 )
 
+const Corner = () => (
+    <svg width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fillRule="evenodd" clipRule="evenodd" d="M8 3.9959L-1.74666e-07 3.9959L2.40074 0.799014C3.20078 -0.26634 4.79922 -0.266338 5.59926 0.799017L8 3.9959Z" fill="white"/>
+    </svg>
+)
+
 const Icons = {
     call: Call,
     mail: Mail,
@@ -94,6 +100,7 @@ const Icons = {
     checkmark: Checkmark,
     logo_big: LogoBig,
     logo_small: LogoSmall,
+    corner: Corner,
 } as const;
 
 export type IconName = keyof typeof Icons;

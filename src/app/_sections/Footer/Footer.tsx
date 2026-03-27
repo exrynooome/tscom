@@ -39,8 +39,8 @@ const Footer: FunctionComponent = () => {
                         </div>
                         <div className={styles.links_block}>
                             <p className={"text_18"}>Контакты</p>
-                            <TextLink href="#footer" onClick={() => navigator.clipboard.writeText("+78612054462")}>+7 861 205-44-62</TextLink>
-                            <TextLink href="#footer" onClick={() => navigator.clipboard.writeText("info@tscom.ru")}>info@tscom.ru</TextLink>
+                            <TextLink onClick={() => navigator.clipboard.writeText("+78612054462")}>+7 861 205-44-62</TextLink>
+                            <TextLink onClick={() => navigator.clipboard.writeText("info@tscom.ru")}>info@tscom.ru</TextLink>
                         </div>
                     </div>
                 </div>
@@ -71,8 +71,8 @@ const Footer: FunctionComponent = () => {
                         </div>
                         <div className={`${styles.links_block} ${styles.desktop_links}`}>
                             <p className={"text_18"}>Контакты</p>
-                            <TextLink href="#footer" onClick={() => navigator.clipboard.writeText("+78612054462")}>+7 861 205-44-62</TextLink>
-                            <TextLink href="#footer" onClick={() => navigator.clipboard.writeText("info@tscom.ru")}>info@tscom.ru</TextLink>
+                            <TextLink onClick={() => navigator.clipboard.writeText("+78612054462")}>+7 861 205-44-62</TextLink>
+                            <TextLink onClick={() => navigator.clipboard.writeText("info@tscom.ru")}>info@tscom.ru</TextLink>
                         </div>
                         <div className={`${styles.links_block} ${styles.mobile_links}`}>
                             <p className={"text_18"}>Контакты</p>

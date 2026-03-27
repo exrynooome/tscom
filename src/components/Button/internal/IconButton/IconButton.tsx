@@ -1,10 +1,13 @@
-import React, { FunctionComponent } from "react";
+import React, {FunctionComponent } from "react";
 import styles from "./IconButton.module.scss";
 import Icon, { IconName } from "@/components/Icons";
+import CopyToast from "@/components/CopyToast";
 
 type Props = {
     variant: "gray" | "green";
     icon: IconName;
+    visible?: boolean;
+    onHidden?: () => void;
     href?: string;
     onClick?: React.MouseEventHandler;
     children?: React.ReactNode;
@@ -16,6 +19,8 @@ const IconButton: FunctionComponent<Props> = ({
                                               href,
                                               children,
                                               className,
+                                              visible,
+                                              onHidden,
                                               icon,
                                               variant,
                                               ...props
@@ -29,6 +34,7 @@ const IconButton: FunctionComponent<Props> = ({
         </>
     )
 
+
     return (
         <>
             {href ? (
@@ -41,14 +47,19 @@ const IconButton: FunctionComponent<Props> = ({
                     {content}
                 </a>
             ) : (
-                <button
-                    className={classNameFull}
-                    onClick={onClick}
-                    type="button"
-                    {...props}
-                >
-                    {content}
-                </button>
+                <div className={styles.container}>
+                    <button
+                        className={classNameFull}
+                        onClick={onClick}
+                        type="button"
+                        {...props}
+                    >
+                        {content}
+                    </button>
+                    {visible && (
+                        <CopyToast visible={visible} onHidden={onHidden} placement={"top"} />
+                    )}
+                </div>
             )}
         </>
     );

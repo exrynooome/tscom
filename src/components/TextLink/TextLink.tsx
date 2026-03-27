@@ -22,7 +22,7 @@ const TextLink: React.FC<Props> = ({
         <Link
             className={`${styles.link} ${className ? ` ${styles[className]}` : ""} text_18 ${styles[variant]} ${error ? styles.error : ""}`}
             onClick={onClick}
-            href={href}
+            href={onClick ? '' : href}
             {...props}
         >
             {children}
