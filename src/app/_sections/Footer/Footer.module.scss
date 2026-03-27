@@ -166,3 +166,12 @@
     display: block;
   }
 }
+
+.copyLink {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}

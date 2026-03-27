@@ -1,6 +1,5 @@
 .container {
   display: flex;
-  flex-direction: column;
   position: absolute;
   width: fit-content;
   left: 50%;
@@ -9,20 +8,16 @@
   opacity: 1;
   transition: opacity 400ms ease;
   filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.16))
-          drop-shadow(0 24px 16px rgba(0, 0, 0, 0.03))
-          drop-shadow(0 12px 12px rgba(0, 0, 0, 0.04))
-          drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
+  drop-shadow(0 24px 16px rgba(0, 0, 0, 0.03))
+  drop-shadow(0 12px 12px rgba(0, 0, 0, 0.04))
+  drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
 
   &.top {
-    transform: translateY(calc(96% + 6px)) translateX(-50%);
+    transform: translateY(calc(100% + 12px)) translateX(-50%);
   }
 
   &.bottom {
-    transform: translateY(calc(-96% - 7px)) translateX(-50%);
-  }
-
-  &.bottom {
-    flex-direction: column-reverse;
+    transform: translateY(calc(-100% - 13px)) translateX(-50%);
   }
 
   &.fadeOut {
@@ -30,18 +25,32 @@
   }
 }
 
-.corner {
-  display: flex;
-  justify-content: center;
-
-  &.bottom {
-    rotate: 180deg;
-  }
-}
-
 .toast {
+  position: relative;
   background: var(--WHITE);
   border-radius: 4px;
   padding: 12px 16px;
   text-align: center;
+}
+
+.toast::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: var(--WHITE);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.toast.top::before {
+  top: -3px;
+
+  border-radius: 2px 0 2px 0;
+}
+
+.toast.bottom::before {
+  bottom: -3px;
+
+  border-bottom-left-radius: 2px;
 }

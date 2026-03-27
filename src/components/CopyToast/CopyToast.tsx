@@ -2,7 +2,6 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import styles from './CopyToast.module.scss';
-import Icon from "@/components/Icons";
 
 type CopyToastProps = {
     text?: string;
@@ -54,14 +53,9 @@ export const CopyToast: React.FC<CopyToastProps> = ({
     if (!render) return null;
 
     return (
-        <div className={`${styles.container} ${placementClass} ${fadeOut && styles.fadeOut}`}>
-            <div className={`${styles.corner} ${placementClass}`}>
-                <Icon name={"corner"} />
-            </div>
-            <div
-                className={`${styles.toast}`}
-            >
-                <p className={"text_14"}>{text}</p>
+        <div className={`${styles.container} ${placementClass} ${fadeOut ? styles.fadeOut : ''}`}>
+            <div className={`${styles.toast} ${placementClass}`}>
+                <p className="text_14">{text}</p>
             </div>
         </div>
     );

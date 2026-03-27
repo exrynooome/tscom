@@ -1,11 +1,27 @@
 'use client'
 
-import React, { FunctionComponent } from "react";
+import React, {FunctionComponent, useState} from "react";
 import styles from "./Footer.module.scss";
 import TextLink from "@/components/TextLink";
 import LogoButton from "@/components/Button/internal/Logo";
+import CopyToast from "@/components/CopyToast";
 
 const Footer: FunctionComponent = () => {
+
+    const [emailV, setEmailV] = useState(false);
+    const [phoneV, setPhoneV] = useState(false);
+
+    const Email = async () => {
+        await navigator.clipboard.writeText("info@tscom.ru");
+        setEmailV(false);
+        requestAnimationFrame(() => setEmailV(true));
+    };
+
+    const Phone = async () => {
+        await navigator.clipboard.writeText("+78612054462");
+        setPhoneV(false);
+        requestAnimationFrame(() => setPhoneV(true));
+    };
 
     return (
         <>
@@ -39,8 +55,14 @@ const Footer: FunctionComponent = () => {
                         </div>
                         <div className={styles.links_block}>
                             <p className={"text_18"}>Контакты</p>
-                            <TextLink onClick={() => navigator.clipboard.writeText("+78612054462")}>+7 861 205-44-62</TextLink>
-                            <TextLink onClick={() => navigator.clipboard.writeText("info@tscom.ru")}>info@tscom.ru</TextLink>
+                            <div className={styles.copyLink}>
+                                <TextLink onClick={Phone}>+7 861 205-44-62</TextLink>
+                                <CopyToast visible={phoneV} onHidden={() => setPhoneV(false)} placement={"bottom"} />
+                            </div>
+                            <div className={styles.copyLink}>
+                                <TextLink onClick={Email}>info@tscom.ru</TextLink>
+                                <CopyToast visible={emailV} onHidden={() => setEmailV(false)} placement={"bottom"} />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -71,8 +93,14 @@ const Footer: FunctionComponent = () => {
                         </div>
                         <div className={`${styles.links_block} ${styles.desktop_links}`}>
                             <p className={"text_18"}>Контакты</p>
-                            <TextLink onClick={() => navigator.clipboard.writeText("+78612054462")}>+7 861 205-44-62</TextLink>
-                            <TextLink onClick={() => navigator.clipboard.writeText("info@tscom.ru")}>info@tscom.ru</TextLink>
+                            <div className={styles.copyLink}>
+                                <TextLink onClick={Phone}>+7 861 205-44-62</TextLink>
+                                <CopyToast visible={phoneV} onHidden={() => setPhoneV(false)} placement={"bottom"} />
+                            </div>
+                            <div className={styles.copyLink}>
+                                <TextLink onClick={Email}>info@tscom.ru</TextLink>
+                                <CopyToast visible={emailV} onHidden={() => setEmailV(false)} placement={"bottom"} />
+                            </div>
                         </div>
                         <div className={`${styles.links_block} ${styles.mobile_links}`}>
                             <p className={"text_18"}>Контакты</p>
