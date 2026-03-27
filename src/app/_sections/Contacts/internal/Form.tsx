@@ -181,7 +181,7 @@ const Form: FunctionComponent = () => {
                     href={"/files/policy.pdf"}
                     error={errors.checkbox}
                 >
-                    <TextLink href={"/"} variant={"policy"} error={errors.checkbox}>
+                <TextLink href={"/files/policy.pdf"} variant={"policy"} error={errors.checkbox}>
                         обработку персональных данных
                     </TextLink>
                 </Checkbox>
